@@ -85,9 +85,9 @@ if(WIN32)
     endforeach()
     # Windows-specific linking
     target_link_libraries(${PROJECT_NAME}
-        ${CMAKE_CURRENT_BINARY_DIR}/../libs/glfw/glfw3dll.lib
-        ${CMAKE_CURRENT_BINARY_DIR}/../libs/assimp/lib/assimp-vc140-mt.lib
-        ${CMAKE_CURRENT_BINARY_DIR}/../libs/irrklang/irrKlang.lib
+        ${CMAKE_CURRENT_BINARY_DIR}/../../../libs/glfw/glfw3dll.lib
+        ${CMAKE_CURRENT_BINARY_DIR}/../../../libs/assimp/lib/assimp-vc140-mt.lib
+        ${CMAKE_CURRENT_BINARY_DIR}/../../../libs/irrklang/irrKlang.lib
         opengl32
         glu32
     )
