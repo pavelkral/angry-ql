@@ -3,14 +3,6 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
-
-#include "player_model.h"
-#include "spritesheet.h"
-#include "enemy_spawner.h"
-#include "geom.h"
-#include "capsule.h"
-#include "enemy.h"
-#include "bullet_store.h"
 #include "lib/glad/include/glad/glad.h"
 #include "glm/glm.hpp"
 #include "glm/gtc/matrix_transform.hpp"
@@ -18,8 +10,17 @@
 #include "glm/gtx/norm.hpp"
 #include "glfw/glfw3.h"
 #include "lib/ThreadPool.h"
-#include "model.h"
 #include "lib/stb/image.h"
+
+#include "model.h"
+#include "player_model.h"
+#include "spritesheet.h"
+#include "enemy_spawner.h"
+#include "geom.h"
+#include "capsule.h"
+#include "enemy.h"
+#include "bullet_store.h"
+
 
 #if SD_ENABLE_IRRKLANG
 #include "irrklang/include/irrKlang.h"
@@ -361,6 +362,11 @@ void processInput(GLFWwindow *window) {
     }
 }
 
+
+//main ============================================================================================
+
+
+
 int main(int argc, const char **argv) {
 
     std::cout << "Starting up" << std::endl;
@@ -699,7 +705,8 @@ int main(int argc, const char **argv) {
     int frameMeasurementCount = 0;
     float totalFrameTime = 0.0f;
 
-    //..........................................................................................................................................................
+    //==================================================================================================================
+    //........................................................Loop.......................................................
     //..........................................................................................................................................................
 
     while (!glfwWindowShouldClose(window)) {
