@@ -476,6 +476,7 @@ int main(int argc, const char **argv) {
     char *p = (char*)"assets/models/EelDog/EelDog.FBX";
 
     Model wigglyBoi(p, false);
+
     Shader playerShader = Shader::create("shaders/player_shader.vert", "shaders/player_shader.frag");
     playerShader.use();
     const unsigned int playerLightSpaceMatrixLocation =
